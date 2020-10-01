@@ -25,7 +25,7 @@ if(!$_GET['id']||!is_numeric($_GET['id'])){
     <meta name="description" content="Donlod Lagu Ori Disini Coeg">
     <meta name="author" content="Anon">
     <link rel="icon" href="assets/images/favicon.ico">
-    <title><?=$name?> - Donlod Lagu Gratis</title>
+    <title><?=$name?> - Downlod Lagu Free sekali</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 	<style>
 		body {
@@ -47,7 +47,7 @@ if(!$_GET['id']||!is_numeric($_GET['id'])){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-		  <a href="#" class="navbar-brand">DonlodLagoe</a>        </div>
+		  <a href="#" class="navbar-brand">DownlodLagoe</a>        </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.php"><i class="glyphicon glyphicon-home"></i> Index</a></li>
@@ -71,10 +71,10 @@ if(!$_GET['id']||!is_numeric($_GET['id'])){
 									<thead>
 										<tr>
 											<th>#</th>
-											<th>Song Name</th>
+											<th>Nama Lagu</th>
 											<th>Artis</th>
-											<th>Album</th>
-											<th>Playtime</th>
+											<th>Album Lagu</th>
+											<th>Waktujalan</th>
 										</tr>
 									</thead>
 								<tbody>
