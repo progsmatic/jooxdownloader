@@ -6,12 +6,12 @@ if(!$_GET['id']||!is_numeric($_GET['id'])){
 	exit;
 }
 if(!$_POST['w']):
-	$ch = curl_init('http://api.joox.com/web-fcgi-bin/web_album_singer?cmd=2&singerid='.trim($_GET['id']).'&sin=0&ein=29&lang=id&country=id&callback=mutiara&_='.time());
+	$ch = curl_init('http://api.joox.com/web-fcgi-bin/web_album_singer?cmd=2&singerid='.trim($_GET['id']).'&sin=0&ein=29&lang=id&country=id&callback=amanda&_='.time());
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36');
 	$json = curl_exec($ch);
 	curl_close($ch);
-	$json = str_replace('mutiara(', '', $json);
+	$json = str_replace('amanda(', '', $json);
 	$json = str_replace(')', '', $json);
 	$json = json_decode($json);
 	if(!$json->name){
@@ -25,10 +25,10 @@ if(!$_POST['w']):
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Donlod Lagu Ori Disini Coeg">
-    <meta name="author" content="Anon">
+    <meta name="description" content="Unduh musik apapun secara mudah dan gratis.">
+    <meta name="author" content="localhuntercom">
     <link rel="icon" href="assets/images/favicon.ico">
-    <title><?=$name?> - Donlod Lagu Gratis</title>
+    <title><?=$name?> - Unduh Musik Gratis</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 	<style>
 		body {
@@ -49,7 +49,7 @@ if(!$_POST['w']):
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-		  <a href="#" class="navbar-brand">DonlodLagoe</a>        </div>
+		  <a href="#" class="navbar-brand">Unduh Musik</a>        </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.php"><i class="glyphicon glyphicon-home"></i> Index</a></li>
@@ -60,7 +60,7 @@ if(!$_POST['w']):
     <div class="container">                    
             <div class="panel panel-info" >
                     <div class="panel-heading">
-                        <div class="panel-title"><?=$name?> - DunludLagu Gratis</div>
+                        <div class="panel-title"><?=$name?> - Unduh Musik 2020</div>
                     </div>    
                     <div class="panel-body">
 						<div class="text-center">
@@ -161,7 +161,7 @@ if(!$_POST['w']):
 			},error: function (a, b, c) {
 				$("#salsakp").html('<div class="alert alert-warning" role="alert">'+c+'</div>');
 			},beforeSend:function() {
-				$("#salsakp").html('<div class="text-center"><p><img src="assets/images/loader.gif"/></p><p class="text-muted">Tunggu sebentar</p></div>');
+				$("#salsakp").html('<div class="text-center"><p><img src="assets/images/loader.gif"/></p><p class="text-muted">Loading...</p></div>');
 			}
 		});
 		return false		
@@ -171,12 +171,12 @@ if(!$_POST['w']):
 <?
 else:
 	header('Content-Type: application/json');
-	$ch = curl_init('http://api.joox.com/web-fcgi-bin/web_album_singer?cmd=2&singerid='.trim($_GET['id']).'&sin='.trim($_POST['q']).'&ein='.trim($_POST['w']).'&lang=id&country=id&callback=mutiara&_='.time());
+	$ch = curl_init('http://api.joox.com/web-fcgi-bin/web_album_singer?cmd=2&singerid='.trim($_GET['id']).'&sin='.trim($_POST['q']).'&ein='.trim($_POST['w']).'&lang=id&country=id&callback=amanda&_='.time());
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36');
 	$json = curl_exec($ch);
 	curl_close($ch);
-	$json = str_replace('mutiara(', '', $json);
+	$json = str_replace('amanda(', '', $json);
 	$json = str_replace(')', '', $json);
 	$json = json_decode($json);
 	if(!$json->name)
